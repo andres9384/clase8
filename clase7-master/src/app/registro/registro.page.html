@@ -1,0 +1,33 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="fondo">
+  <div class="fondo">
+      <ion-button routerLink="/" > <ion-icon name="return-left"></ion-icon></ion-button>  
+ <div class="logo"><ion-img src= "assets/icon/r7.png"></ion-img></div>
+ <form (ngSubmit)=login(Forma) #Forma="ngForm">
+ <p class="texto" style="color: aliceblue"><b>Tenga en cuenta que el administrador revisara su solicitud y dara aprobacion dentro de 24 horas siguiente al envio de datos</b></p>
+  <ion-item color="tertiary">
+  <ion-label position="Email"><ion-icon name="mail"></ion-icon>Email</ion-label>
+  <ion-input ngModel #user="ngModel" name="Email" minlength="3" > </ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label postion="Name"><ion-icon name="person"></ion-icon> Usuario</ion-label>
+    <ion-input ngModel #user="ngModel" name="User" minlength="3" > </ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label position="password" ><ion-icon name="key" ></ion-icon>Contraseña</ion-label>
+    <ion-input ngModel #user="ngModel" name="Clave" minlength="3" > </ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label position="password"><ion-icon name="key" ></ion-icon>Repita la Contraseña</ion-label>
+    <ion-input ngModel #user="ngModel" name="Clave" minlength="3" > </ion-input>
+  </ion-item>
+  <ion-button routerLink="/" type="submit" [disabled]=!Forma.valid expand="block" > registrarse</ion-button>
+  </form>
+  
+</div>
+
+
+</ion-content>

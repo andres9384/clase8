@@ -1,0 +1,34 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-title>login</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+<ion-content>
+    <div class="backgroundTheme">
+<div class="imagen"><ion-img src= "assets/icon/r7.png"></ion-img></div>
+<form (ngSubmit)=login(Forma) #Forma="ngForm">
+    
+    <ion-item color="tertiary">
+        <ion-label position="Email"><ion-icon name="at"></ion-icon> correo electronico: </ion-label>
+       <ion-input   ngModel #user="ngModel" name="user" minlength="3" > </ion-input>
+    </ion-item>
+
+    <ion-item  color="tertiary">
+        <ion-label input type="password" icon name="key"><ion-icon name="key" ></ion-icon>  Contraseña:</ion-label>
+        <ion-input type="password" ngModel #password="ngModel" name="password" minlength="3"></ion-input>
+    </ion-item>
+
+
+    <ion-item  color="tertiary">
+        <ion-label position="name"><ion-icon name="contact" class="icon"></ion-icon>Nombre:</ion-label>
+        <ion-input ngModel #name="ngModel" name="name" minlength="3"></ion-input>
+    </ion-item>
+    <ion-button  type="submit" [disabled]=!Forma.valid expand="block"><ion-icon name="log-in"></ion-icon>Enviar</ion-button>
+    
+   <p class="linea"> O</p>
+   <br>
+    <ion-button routerLink="/invitado" type="submit" [disabled]=!Forma.valid expand="default" class="pelo"><ion-icon name="logo-octocat"></ion-icon>       INVITADO</ion-button>
+    <ion-button routerLink="/registro" type="submit" [disabled]=!Forma.valid  expand="default"  class="palo"><ion-icon name="bookmarks"></ion-icon>         REGISTRO</ion-button>
+</form>
+</div>
+</ion-content> 
